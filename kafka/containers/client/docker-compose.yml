@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  client:
+    image: jeqo/apache-kafka-client:0.10.1.0-2.11
+    command: sleep infinity
+    networks:
+      - default
+      - cluster_default
+networks:
+  cluster_default:
+    external: true
